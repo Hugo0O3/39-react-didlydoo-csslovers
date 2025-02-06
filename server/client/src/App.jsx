@@ -1,26 +1,19 @@
-import { useEffect, useState } from 'react'
 import './App.css'
-import axios from 'axios'
+import { Routes, Route } from "react-router-dom";
+import Index from '../pages/Index.jsx'
+import Home from '../pages/Home.jsx'
+import Event from '../pages/Event.jsx'
+import EditEvent from '../pages/EditEvent.jsx'
 
 function App() {
-
-  const [events, setEvents] = useState([])
-
-  useEffect(() => {
-    axios.get('http://localhost:3000/api/events/')
-      .then(res => setEvents(res.data))
-      .catch(error => console.log(error))
-  }, [])
-
   return (
-    <>
-      <div>
-        <h2>Test servers</h2>
-        {data.map(data => (
-          <p key={data.id}>{data}</p>
-        ))}
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<Index />}>
+        <Route index element={<Home />} />
+        <Route path="event" element={<Event />} />
+        <Route path="editEvent" element={<EditEvent />} />
+      </Route>
+    </Routes>
   )
 }
 
