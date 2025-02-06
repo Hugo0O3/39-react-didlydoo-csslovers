@@ -14,6 +14,9 @@ const Index = () => {
                     <li>
                         <Link to="/editEvent">EditEvent</Link>
                     </li>
+                    <li>
+                        <Link to="/attendees">Attendees</Link>
+                    </li>
                 </ul>
             </nav>
 
