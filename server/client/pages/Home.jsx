@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import "../src/App.module.css";
+import "../src/index.module.css"
+
 
 const Home = () => {
 
@@ -13,7 +16,7 @@ const Home = () => {
 
     return (
         <>
-            <section>
+            <section className='allEvent'>
                 <h2>Événements</h2>
                 {events.map(event => (
                     <section key={event.id}>

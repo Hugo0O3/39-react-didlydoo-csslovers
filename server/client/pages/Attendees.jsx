@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useParams } from 'react-router';
 
 const Attendees = () => {
-    const { id, name } = useParams()
+    const { name } = useParams()
     const [attendees, setAttendees] = useState([])
     const [attendeesDetails, setAttendeesDetails] = useState(null)
 
@@ -13,29 +13,56 @@ const Attendees = () => {
             .catch(error => console.log(error))
     }, [])
 
-    useEffect(() => {
-        if (name) {
-            axios.get(`http://localhost:3000/api/attendees/${name}`)
-                .then(res => setAttendeesDetails(res.data))
-                .catch(error => console.log(error))
-        }
-    }, [name])
+    // useEffect(() => {
+    //     if (name) {
+    //         axios.get(`http://localhost:3000/api/attendees/${name}`)
+    //             .then(res => setAttendeesDetails(res.data))
+    //             .catch(error => console.log(error))
+    //     }
+    // }, [name])
+
+    {/* Pour avoir des dates sans doublons (Set)*/ }
+    const attendeesDates = Array.from(new Set(attendees.flatMap(attendee => attendee.events)
+        .flatMap(event => event.dates.map(d => d.date))))
 
     return (
         <>
             <section>
                 <h2>Attendees:</h2>
-                {attendees.map((attendee, index) => (
-                    <section key={`${attendee.name}${index}`}>
-                        <h3>{attendee.name}</h3>
-                        {attendee.dates.map((d, index) => {
-                            <p key={`${d.date}${index}`}>{d}</p>
-                        })}
-                    </section>
-                ))}
-            </section>
-            <section>
-                <h2>Participation of {attendeesDetails.name}</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Names</th>
+                            {attendeesDates.map(date => (
+                                <th key={date}>{date}</th>
+                            ))}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {attendees.map(({ name, events }) => (
+                            <tr key={name}>
+                                <td>{name}</td>
+                                {attendeesDates.map(date => {
+                                    const event = events.find(({ dates }) =>
+                                        dates.some(({ date: dateEvent }) => dateEvent === date))
+
+                                    const datesInfos = event ? event.dates.find(({ date: dateEvent }) => dateEvent === date) : null
+
+                                    let available = ""
+                                    if (datesInfos) {
+                                        available = datesInfos.available ? "✅" : "❌"
+                                    }
+
+                                    return (
+                                        <td key={`${name}${date}`}>
+                                            {available || "No dates"}
+                                        </td>
+                                    )
+                                })}
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </section>
         </>
     )

@@ -1,8 +1,12 @@
 import { Outlet, Link } from "react-router-dom";
+import style from '../src/index.module.css'
+import Logo from '../src/assets/logo.png'
 
 const Index = () => {
     return (
         <>
+        <header>
+        <img class="didlydoo" src={Logo} alt="logo Didlydoo" />
             <nav>
                 <ul>
                     <li>
@@ -19,8 +23,8 @@ const Index = () => {
                     </li>
                 </ul>
             </nav>
-
             <Outlet />
+            </header>
         </>
     )
 };
