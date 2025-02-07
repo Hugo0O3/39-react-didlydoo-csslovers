@@ -43,7 +43,7 @@ const Event = () => {
                 <p>Dates:</p>
 
                 {eventsDetails.dates.map((date, index)=> (
-                    <p key={`${eventsDetails.id}${date}`}>{new Date(date).toLocaleString()}</p>
+                    <p key={`${eventsDetails.id}${date}`}>{date.date}</p>
                 ))}
                <h3>Attendees:</h3>
                {eventsDetails.attendees && eventsDetails.attendees.length > 0 ? (

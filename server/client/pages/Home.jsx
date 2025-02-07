@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
-import "../src/App.module.css";
-import "../src/index.module.css"
-
 
 const Home = () => {
 
@@ -16,11 +14,13 @@ const Home = () => {
 
     return (
         <>
-            <section className='allEvent'>
+            <section>
                 <h2>Événements</h2>
                 {events.map(event => (
                     <section key={event.id}>
-                        <h3>{event.name}</h3>
+                        <h3>
+                            <Link to={`/events/${event.id}`}>{event.name}</Link>
+                        </h3>
                         <p>{event.description}</p>
                         <p>Author: {event.author}</p>
 
