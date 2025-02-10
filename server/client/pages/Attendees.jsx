@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router';
+import "../src/App.module.css";
+import "../src/index.module.css";
 
 const Attendees = () => {
     const { name } = useParams()
@@ -28,7 +30,7 @@ const Attendees = () => {
 
     return (
         <>
-            <section>
+            <section className='tableau-attendees'>
                 <h2>Attendees:</h2>
                 <table>
                     <thead>

@@ -1,8 +1,12 @@
 import { Outlet, Link } from "react-router-dom";
 import style from '../src/index.module.css'
 import Logo from '../src/assets/logo.png'
+import { useEffect } from "react";
+
 
 const Index = () => {
+
+
     return (
         <>
         <header>
