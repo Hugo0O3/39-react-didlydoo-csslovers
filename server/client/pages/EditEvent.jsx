@@ -1,22 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
+import DatePicker from "react-multi-date-picker"
 
 export default function App() {
-    const [postData, setPostData] = useState(null)
     const [name, setName] = useState("")
     const [dates, setDates] = useState([])
     const [author, setAuthor] = useState("")
     const [description, setDescription] = useState("")
 
-    const handleDateChange = (event) => {
-        setDates([event.target.value]); // Stocker la date dans un tableau
-    };
-
     const handleSubmit = async (event) => {
         event.preventDefault();
         const eventInfos = {
             name,
-            dates,
+            dates: dates.map(d => d.format("YYYY-MM-DD")),
             author,
             description,
         };
@@ -43,7 +39,13 @@ export default function App() {
                 <input type="text" value={name} onChange={(event) => setName(event.target.value)} placeholder='John Doe' required />
 
                 <label>Dates</label>
-                <input type="date" onChange={handleDateChange} required />
+                <DatePicker
+                    multiple
+                    value={dates}
+                    onChange={setDates}
+                    format="YYYY-MM-DD"
+                    required
+                />
 
                 <label>Author</label>
                 <input type="text" value={author} onChange={(event) => setAuthor(event.target.value)} placeholder='Harry PotDeFleur' required />
