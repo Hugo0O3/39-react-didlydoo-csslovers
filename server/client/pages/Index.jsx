@@ -6,7 +6,7 @@ const Index = () => {
     return (
         <>
         <header>
-        <img class="didlydoo" src={Logo} alt="logo Didlydoo" />
+        <img className="didlydoo" src={Logo} alt="logo Didlydoo" />
             <nav>
                 <ul>
                     <li>

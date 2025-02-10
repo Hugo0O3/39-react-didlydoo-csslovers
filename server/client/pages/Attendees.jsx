@@ -13,6 +13,7 @@ const Attendees = () => {
             .catch(error => console.log(error))
     }, [])
 
+    //pour avoir tous les event où une personne participe ?
     // useEffect(() => {
     //     if (name) {
     //         axios.get(`http://localhost:3000/api/attendees/${name}`)

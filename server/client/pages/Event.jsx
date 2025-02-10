@@ -32,7 +32,7 @@ const Event = () => {
     }
 
 
-    //invalid Date et no attendees yet à régler comme probème
+    //no attendees yet à régler comme problème
     return (
         <>
             <section className='DetailsOneEvent'>
