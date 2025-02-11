@@ -20,7 +20,7 @@ const Index = () => {
                         <Link to="/events/:id">Event</Link>
                     </li>
                     <li>
-                        <Link to="/editEvent">EditEvent</Link>
+                        <Link to="/editEvent">AddEvent</Link>
                     </li>
                     <li>
                         <Link to="/attendees">Attendees</Link>
