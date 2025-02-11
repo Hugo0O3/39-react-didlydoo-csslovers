@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import DatePicker from "react-multi-date-picker"
 
-export default function App() {
+export default function AddEvent() {
     const [name, setName] = useState("")
     const [dates, setDates] = useState([])
     const [author, setAuthor] = useState("")

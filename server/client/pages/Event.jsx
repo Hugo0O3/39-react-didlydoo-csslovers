@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import "../src/App.module.css";
 import "../src/index.module.css";
+import DeleteEvent from "./DeleteEvent";
 
 const Event = () => {
-    const { id } = useParams();
-    const [eventsDetails, setEventsDetails] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const { id } = useParams()
+    const [eventsDetails, setEventsDetails] = useState(null)
+    const [loading, setLoading] = useState(true)
+    const navigation = useNavigate()
 
     useEffect(() => {
         if (id) {
@@ -38,6 +40,10 @@ const Event = () => {
     };
 
     const datesEvent = eventsDetails.dates.map((date) => date.date);
+
+    const handleDeleteNavigate = () => {
+        navigation('/')
+    }
 
     return (
         <section className="DetailsOneEvent">
@@ -80,6 +86,7 @@ const Event = () => {
                     ))}
                 </tbody>
             </table>
+            <DeleteEvent id={id} onDelete={handleDeleteNavigate}></DeleteEvent>
         </section>
     );
 };

@@ -13,25 +13,25 @@ const Index = () => {
 
     return (
         <>
-            <header>
-                <img className={style.didlydoo} src={Logo} alt="logo Didlydoo" />
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/events/:id">Event</Link>
-                        </li>
-                        <li>
-                            <Link to="/editEvent">EditEvent</Link>
-                        </li>
-                        <li>
-                            <Link to="/attendees">Attendees</Link>
-                        </li>
-                    </ul>
-                </nav>
-                <Outlet />
+        <header>
+        <img className={style.didlydoo} src={Logo} alt="logo Didlydoo" />
+            <nav>
+                <ul>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/events/:id">Event</Link>
+                    </li>
+                    <li>
+                        <Link to="/editEvent">AddEvent</Link>
+                    </li>
+                    <li>
+                        <Link to="/attendees">Attendees</Link>
+                    </li>
+                </ul>
+            </nav>
+            <Outlet />
             </header>
             <Squares
                 speed={0.5}
