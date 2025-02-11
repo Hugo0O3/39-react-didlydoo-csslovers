@@ -156,6 +156,7 @@ h2{
   width: 100%;
   max-width: 1200px;
   padding: 10px;
+  padding-left: 20px;
 }
 
 .event-item{
