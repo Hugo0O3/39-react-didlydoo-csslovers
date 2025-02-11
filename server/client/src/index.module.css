@@ -15,23 +15,30 @@
 html,
 body {
   font-family: 'Teko';
-  background-color: #e7f4fa;
+  /*background-color: #e4eaff;*/
   width: 100vw;
   height: 100vw;
-  /*background-image: url('./src/assets/Background3.jpg');
+  /*background-image: url('./src/assets/Background4.jpg');
   background-size: 100vw;*/
 }
 
 header {
-  background-color: #2081d5;
-  max-height: 100px;
+  background-color: #29d0ea;
+  max-height: 200px;
   border: 3px solid #fff;
   border-radius: 10px;
 }
 
-.didlydoo img{
+.didlydoo{
   display: flex;
   align-items: start;
+  width: 200px;
+  height: 200px;
+  margin-left: 50px;
+}
+
+.didlydoo:hover {
+  opacity: 0.9;
 }
 
 nav ul {
