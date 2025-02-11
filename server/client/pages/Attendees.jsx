@@ -31,7 +31,7 @@ const Attendees = () => {
     return (
         <>
             <section className='tableau-attendees'>
-                <h2>Attendees:</h2>
+                <h2 className='attendees-title'>Attendees:</h2>
                 <table>
                     <thead>
                         <tr>

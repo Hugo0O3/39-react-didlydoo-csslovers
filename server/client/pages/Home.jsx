@@ -16,22 +16,24 @@ const Home = () => {
 
     return (
         <>
-            <section>
-                <h2>Événements</h2>
-                {events.map(event => (
-                    <section key={event.id}>
-                        <h3>
-                            <Link to={`/events/${event.id}`}>{event.name}</Link>
-                        </h3>
-                        <p>{event.description}</p>
-                        <p>Author: {event.author}</p>
+            <div className='events-wrapper'>
+                <h2 className='home-title'>Events :</h2>
+                <div className='events-container'>
+                    {events.map(event => (
+                        <div key={event.id} className='event-item'>
+                            <h3>
+                                <Link to={`/events/${event.id}`}>{event.name}</Link>
+                            </h3>
+                            <p>{event.description}</p>
+                            <p>Author: {event.author}</p>
 
-                        {event.dates.map(d => (
-                            <p key={`${event.id}${d.date}`}>{d.date}</p>
-                        ))}
-                    </section>
-                ))}
-            </section>
+                            {event.dates.map(d => (
+                                <p key={`${event.id}${d.date}`}>{d.date}</p>
+                            ))}
+                        </div>
+                    ))}
+                </div>
+            </div>
         </>
     )
 };

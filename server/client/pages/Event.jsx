@@ -51,7 +51,7 @@ const Event = () => {
                 <EditEvent event={eventsDetails} onCancel={handleEditToggle} />
             ) : (
                 <>
-                    <h2>Event: {eventsDetails.name}</h2>
+                    <h2 className="event-title">Event: {eventsDetails.name}</h2>
                     <p>{eventsDetails.description}</p>
                     <p>Author: {eventsDetails.author}</p>
                     <p>Dates:</p>

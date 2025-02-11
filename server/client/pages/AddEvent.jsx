@@ -36,6 +36,7 @@ export default function AddEvent() {
 
     return (
         <section className='addEvent'>
+            <h2 className='add-title'></h2>
             <form onSubmit={handleSubmit}>
                 <label>Name</label>
                 <input type="text" value={name} onChange={(event) => setName(event.target.value)} placeholder='John Doe' required />

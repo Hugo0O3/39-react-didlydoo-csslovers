@@ -24,7 +24,7 @@ const EditEvent = ({ event, onCancel }) => {
 
     return (
         <section>
-            <h2>Edit Event</h2>
+            <h2 className="edit-title">Edit Event</h2>
 
             <form>
                 <label htmlFor="name">Name</label>
