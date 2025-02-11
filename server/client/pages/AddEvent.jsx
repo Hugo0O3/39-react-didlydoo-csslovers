@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import DatePicker from "react-multi-date-picker"
+import "../src/App.module.css";
+import "../src/index.module.css";
 
 export default function AddEvent() {
     const [name, setName] = useState("")

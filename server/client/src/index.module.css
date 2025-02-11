@@ -9,25 +9,44 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 1440px;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 5rem;
+  text-align: center;
+
 }
 
 
 html,
 body {
+  text-align: center;
   font-family: 'Teko';
   /*background-color: #e4eaff;*/
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   /*background-image: url('./src/assets/Background4.jpg');
   background-size: 100vw;*/
 }
 
 header {
-  background-color: #29d0ea;
+  background-color: #ecfcff;
   max-height: 200px;
   border: 3px solid #fff;
-  border-radius: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+  z-index: -1;
+  margin-top: 10px;
 }
+
+/*header img{
+  width: 150px;
+  margin-bottom: 20px;
+}*/
 
 .didlydoo{
   display: flex;
@@ -35,13 +54,24 @@ header {
   width: 200px;
   height: 200px;
   margin-left: 50px;
+  z-index: 2;
+  position: fixed;
 }
 
-.didlydoo:hover {
+/*.didlydoo:hover {
   opacity: 0.9;
+}*/
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  position: fixed;
 }
 
 nav ul {
+  width: 50%;
   display: flex;
   justify-content: space-around;
   list-style-type: none;
@@ -56,14 +86,14 @@ nav li {
 }
 
 nav a {
-  color: #fff;
-  display: grid;
-  grid-template-columns: repeat(3fr);
+  color: #6c3aea;
+  display: block;
+  /*grid-template-columns: repeat(3fr);*/
   text-decoration: none;
 }
 
 nav a:hover {
-  color: #ff9d60;
+  color: #21c0ff;
   transform: scale(1.1);
 }
 
@@ -83,6 +113,19 @@ h3{
 
 
 
+
+
+
+h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #fff;
+}
+
+/*.nav {
+  display: flex;
+  justify-content: space-around;
+}*/
 
 
 /*

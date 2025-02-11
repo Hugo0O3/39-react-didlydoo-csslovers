@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import "../src/App.module.css";
+import "../src/index.module.css";
 
 const Home = () => {
 
