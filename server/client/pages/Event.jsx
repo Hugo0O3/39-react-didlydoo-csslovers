@@ -45,6 +45,8 @@ const Event = () => {
         return <p>No event found</p>;
     }
 
+    const datesEvent = eventsDetails.dates.map((date) => date.date)
+
     return (
         <section className="DetailsOneEvent">
             {isEditing ? (
@@ -58,12 +60,43 @@ const Event = () => {
                     {eventsDetails.dates.map((date, index) => (
                         <p key={`${eventsDetails.id}${index}`}>{date.date}</p>
                     ))}
+
+                    <h3>Attendees:</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Names</th>
+                                {eventsDetails.dates.map((date) => (
+                                    <th key={date.date}>{date.date}</th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {eventsDetails.dates[0].attendees.map(({ name }) => (
+                                <tr key={name}>
+                                    <td>{name}</td>
+                                    {datesEvent.map((date) => {
+                                        const attendee = eventsDetails.dates
+                                            .find((d) => d.date === date)
+                                            ?.attendees.find((att) => att.name === name)
+
+                                        return (
+                                            <td key={`${name}${date}`}>
+                                                {attendee ? (attendee.available ? "✅" : "❌") : "No dates"}
+                                            </td>
+                                        )
+                                    })}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+
                     <DeleteEvent id={id} onDelete={handleDeleteNavigate} />
                     <button onClick={handleEditToggle}>Edit Event</button>
                 </>
             )}
         </section>
-    );
-};
+    )
+}
 
-export default Event;
+export default Event
