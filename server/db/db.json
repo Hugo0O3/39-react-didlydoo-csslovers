@@ -1,24 +1,65 @@
 [
   {
-    "id": "acdae8b96af6",
-    "name": "Party party yeah",
-    "author": "Misty",
-    "description": "Lezgo party",
+    "id": "c8067bc8951f",
+    "name": "test",
+    "author": "test",
+    "description": "youtpogi'po",
     "dates": [
+      "2025-02-13",
+      "2025-02-14"
+    ],
+    "created_at": "2025-02-12T12:36:40.383Z",
+    "num_modification": 0,
+    "last_modification": "2025-02-12T12:36:40.383Z",
+    "attendees": []
+  },
+  {
+    "id": "6b7fa36bb7fa",
+    "name": "test",
+    "author": "test",
+    "description": "test",
+    "dates": [
+      "2025-02-14",
       "2025-02-20",
       "2025-02-22",
-      "2025-02-24"
+      "2025-02-28"
     ],
-    "created_at": "2025-02-12T07:57:42.931Z",
+    "attendees": [
+      {
+        "name": "Yo",
+        "dates": [
+          {
+            "date": "2025-02-14",
+            "available": true
+          }
+        ]
+      }
+    ],
+    "created_at": "2025-02-12T08:00:27.361Z",
     "num_modification": 0,
-    "last_modification": "2025-02-12T07:57:42.931Z",
+    "last_modification": "2025-02-12T08:00:27.361Z"
+  },
+  {
+    "id": "daae49e8c349",
+    "name": "azd",
+    "author": "azd",
+    "description": "azd",
+    "dates": [
+      "2025-02-12",
+      "2025-02-20",
+      "2025-02-27",
+      "2025-02-26"
+    ],
+    "created_at": "2025-02-11T22:58:16.817Z",
+    "num_modification": 0,
+    "last_modification": "2025-02-11T22:58:16.817Z",
     "attendees": []
   },
   {
     "id": "dd751f3f5f1d",
-    "name": "test123",
-    "author": "test",
-    "description": "greqgqerg",
+    "name": "waw",
+    "author": "C'est incroyable",
+    "description": "gg",
     "dates": [
       "2025-02-13",
       "2025-02-15",
@@ -26,8 +67,8 @@
       "2025-02-22"
     ],
     "created_at": "2025-02-11T15:05:08.732Z",
-    "num_modification": 1,
-    "last_modification": "2025-02-11T15:28:45.032Z",
+    "num_modification": 2,
+    "last_modification": "2025-02-11T22:42:07.808Z",
     "attendees": []
   },
   {

@@ -24,7 +24,7 @@ const Home = () => {
                         <th>Description</th>
                         <th>Author</th>
                         <th>Dates</th>
-                        <th>Attendees</th>
+                        {/* <th>Attendees</th> */}
                     </tr>
                 </thead>
                 <tbody>
@@ -40,7 +40,7 @@ const Home = () => {
                                     <p key={`${event.id}${d.date}`}>{d.date}</p>
                                 ))}
                             </td>
-                            <td>{event.participants ? event.participants.length : 0}</td>
+                            {/* <td>{event.participants ? event.participants.length : 0}</td> */}
                         </tr>
                     ))}
                 </tbody>

@@ -16,7 +16,7 @@ const Header = () => {
             <nav className={style.nav}>
                 <ul>
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/events/:id">Events</Link></li>
+                    {/* <li><Link to="/events/:id">Events</Link></li> */}
                     <li><Link to="/editEvent">Add Event</Link></li>
                     <li><Link to="/attendees">Attendees</Link></li>
                 </ul>
