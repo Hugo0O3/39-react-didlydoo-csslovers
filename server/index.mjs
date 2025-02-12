@@ -4,6 +4,7 @@ import cors from 'cors'
 import eventsRoute from './routes/events.mjs'
 import attendanceRoute from './routes/attendance.mjs'
 
+
 const PORT = 3000
 const app = express()
 const _BOOT_TIME = new Date()
