@@ -5,12 +5,13 @@ import EditEvent from "./EditEvent";
 import DeleteEvent from "./DeleteEvent";
 import "../src/App.module.css";
 import "../src/index.module.css";
+// import AddAttendees from "./AddAttendees";
 
 const Event = () => {
     const { id } = useParams();
-    const [eventsDetails, setEventsDetails] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [isEditing, setIsEditing] = useState(false);
+    const [eventsDetails, setEventsDetails] = useState(null)
+    const [loading, setLoading] = useState(true)
+    const [isEditing, setIsEditing] = useState(false)
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -81,16 +82,17 @@ const Event = () => {
                                             ?.attendees.find((att) => att.name === name)
 
                                         return (
+                                            // <button>
                                             <td key={`${name}${date}`}>
                                                 {attendee ? (attendee.available ? "✅" : "❌") : "No dates"}
                                             </td>
+                                            // </button>
                                         )
                                     })}
                                 </tr>
                             ))}
                         </tbody>
                     </table>
-
                     <DeleteEvent id={id} onDelete={handleDeleteNavigate} />
                     <button onClick={handleEditToggle}>Edit Event</button>
                 </>
