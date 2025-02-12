@@ -11,7 +11,60 @@
     "created_at": "2025-02-12T12:36:40.383Z",
     "num_modification": 0,
     "last_modification": "2025-02-12T12:36:40.383Z",
-    "attendees": []
+    "attendees": [
+      {
+        "name": "hugo",
+        "dates": [
+          {
+            "date": "2025-02-13",
+            "available": true
+          },
+          {
+            "date": "2025-02-14",
+            "available": false
+          }
+        ]
+      },
+      {
+        "name": "test",
+        "dates": [
+          {
+            "date": "2025-02-13",
+            "available": true
+          },
+          {
+            "date": "2025-02-14",
+            "available": false
+          }
+        ]
+      },
+      {
+        "name": "test1",
+        "dates": [
+          {
+            "date": "2025-02-13",
+            "available": null
+          },
+          {
+            "date": "2025-02-14",
+            "available": false
+          }
+        ]
+      },
+      {
+        "name": "prout",
+        "dates": [
+          {
+            "date": "2025-02-13",
+            "available": null
+          },
+          {
+            "date": "2025-02-14",
+            "available": true
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "6b7fa36bb7fa",
@@ -31,6 +84,48 @@
           {
             "date": "2025-02-14",
             "available": true
+          }
+        ]
+      },
+      {
+        "name": "Test",
+        "dates": [
+          {
+            "date": "2025-02-14",
+            "available": null
+          },
+          {
+            "date": "2025-02-20",
+            "available": null
+          },
+          {
+            "date": "2025-02-22",
+            "available": null
+          },
+          {
+            "date": "2025-02-28",
+            "available": null
+          }
+        ]
+      },
+      {
+        "name": "Test1",
+        "dates": [
+          {
+            "date": "2025-02-14",
+            "available": true
+          },
+          {
+            "date": "2025-02-20",
+            "available": false
+          },
+          {
+            "date": "2025-02-22",
+            "available": null
+          },
+          {
+            "date": "2025-02-28",
+            "available": false
           }
         ]
       }

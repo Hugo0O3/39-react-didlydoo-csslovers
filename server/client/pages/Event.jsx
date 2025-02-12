@@ -54,20 +54,20 @@ const Event = () => {
                 <EditEvent event={eventsDetails} onCancel={handleEditToggle} />
             ) : (
                 <>
-                <h1 className="event-title">Event: {eventsDetails.name}</h1>
-                <table className="event-table">
-                    <thead>
-                        <tr>
-                    
-                    <p>{eventsDetails.description}</p>
-                    <th>Author: {eventsDetails.author}</th>
-                    <th>Dates:</th>
-                    {eventsDetails.dates.map((date, index) => (
-                        <p key={`${eventsDetails.id}${index}`}>{date.date}</p>
-                    ))}
-                    </tr>
-                    </thead>
-                </table>
+                    <h1 className="event-title">Event: {eventsDetails.name}</h1>
+                    <table className="event-table">
+                        <thead>
+                            <tr>
+
+                                <p>{eventsDetails.description}</p>
+                                <th>Author: {eventsDetails.author}</th>
+                                <th>Dates:</th>
+                                {eventsDetails.dates.map((date, index) => (
+                                    <p key={`${eventsDetails.id}${index}`}>{date.date}</p>
+                                ))}
+                            </tr>
+                        </thead>
+                    </table>
                     <h3>Attendees:</h3>
                     <table className="event-attendees">
                         <thead>
@@ -100,11 +100,11 @@ const Event = () => {
                         </tbody>
                     </table>
                     <table className="button-table">
-                        
+
                         <td><DeleteEvent id={id} onDelete={handleDeleteNavigate} /></td>
                         <td><button onClick={handleEditToggle} className="submit-button event-page">Edit Event</button></td>
-                        
-                        </table>
+
+                    </table>
                 </>
             )}
         </section>
