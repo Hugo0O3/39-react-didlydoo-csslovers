@@ -17,6 +17,9 @@
 
 }
 
+.custom{
+  cursor: url('./assets/cursor2.svg'),auto;
+}
 
 html,
 body {
@@ -42,10 +45,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 50px;
-  position: fixed;
-  z-index: 1000;
+  position: relative;
+  z-index: 10;
   top: 10px;
-  left: 50px;
+  margin-left: -50px;
 }
 
 .didlydoo{
@@ -98,7 +101,7 @@ nav a:hover {
 
 /*main container all pages*/
 main{
-  margin-top: 300px;
+  margin-top: 100px;
   background-color: #ecfcff;
   border: 3px solid #fff;
   border-radius: 5px;
@@ -202,6 +205,11 @@ width: 100%;
   transform: scale(1.05);
 }*/
 
+Link:hover{
+  color: #21c0ff;
+  transform: scale(1.1);
+}
+
 /*addevent page*/
 .addEvent{
   max-width: 600px;
@@ -252,6 +260,7 @@ input:focus, textarea:focus{
   border-color: #21c0ff;
 }
 
+/*rezize pour la boite de description */
 textarea{
   resize: none;
   height: 120px;
@@ -267,10 +276,24 @@ button{
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.button-container{
+color: #21c0ff;
 }
 
 button:hover{
   background-color: #21c0ff;
+}
+
+
+.button-table table{
+  margin-left: 500px;
+  display: flex;
+  justify-content: center;
 }
 
 /*attendees page*/
@@ -290,7 +313,7 @@ button:hover{
   margin-bottom: 20px;
 }
 
-table{
+table .home-table{
   width: 100%;
   border-collapse: collapse;
   background: white;
@@ -317,10 +340,26 @@ td {
   font-size: 20px;
 }
 
+/*pour 1 case sur 2 dans une autre couleur (page home et attendees)*/
 tbody tr:nth-child(even){
-  background-color: #f3f3f3;
+  background-color: #f3f5ff;
 }
 
+
+/*event id page*/
+
+table .event-table{
+  width: 100%;
+  border-collapse: collapse;
+  background: rgb(116, 72, 72);
+  overflow: hidden;
+}
+
+button .edit-button{
+  margin-top: 500px;
+}
+
+/*
 @media screen and (max-width: 768px){
   .tableau-attendees{
     overflow-x: auto;
@@ -339,69 +378,4 @@ tbody tr:nth-child(even){
 
 h3{
   color: #0d136c;
-}
-
-
-
-
-/*.tableau-attendees{
-  display: flex;
-  align-items: center;
-  background-color: #0d136c;
-  border: 3px solid #fff;
-  border-radius: 20px;
 }*/
-
-/*.nav {
-  display: flex;
-  justify-content: space-around;
-}*/
-
-
-/*
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-*/

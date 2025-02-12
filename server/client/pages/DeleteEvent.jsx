@@ -27,7 +27,7 @@ export default function DeleteEvent({ id, onDelete }) {
             {/* Pop Up oui ou non */}
             {popUp && (
                 <section>
-                    <p>Voulez-vous supprimer cet événement ?</p>
+                    <p>Voulez-vous supprimer cet événement ? 🤨</p>
                     <section>
                         <button onClick={handleDel}>Confirmer</button>
                         <button onClick={() => setPopUp(false)}>Annuler</button>

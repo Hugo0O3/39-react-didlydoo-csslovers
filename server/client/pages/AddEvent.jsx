@@ -39,7 +39,7 @@ export default function AddEvent() {
             <h2 className='add-title'>Add your event</h2>
             <form onSubmit={handleSubmit}>
                 <label>Name</label>
-                <input type="text" value={name} onChange={(event) => setName(event.target.value)} placeholder='Johnny Silverhand' required />
+                <input type="text" value={name} onChange={(event) => setName(event.target.value)} placeholder='Event name' required />
 
                 <label>Dates</label>
                 <DatePicker
@@ -62,8 +62,9 @@ export default function AddEvent() {
                     onChange={(event) => setDescription(event.target.value)}
                     required
                 />
-
-                <button type='submit'>Submit</button>
+                <div id='add-button'>
+                <button type='submit' className='submit-button add-event-page'>Submit</button>
+                </div>
             </form>
         </section>
     )

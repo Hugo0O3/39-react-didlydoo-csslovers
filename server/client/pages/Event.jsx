@@ -53,16 +53,22 @@ const Event = () => {
                 <EditEvent event={eventsDetails} onCancel={handleEditToggle} />
             ) : (
                 <>
-                    <h2 className="event-title">Event: {eventsDetails.name}</h2>
+                <h1 className="event-title">Event: {eventsDetails.name}</h1>
+                <table className="event-table">
+                    <thead>
+                        <tr>
+                    
                     <p>{eventsDetails.description}</p>
-                    <p>Author: {eventsDetails.author}</p>
-                    <p>Dates:</p>
+                    <th>Author: {eventsDetails.author}</th>
+                    <th>Dates:</th>
                     {eventsDetails.dates.map((date, index) => (
                         <p key={`${eventsDetails.id}${index}`}>{date.date}</p>
                     ))}
-
+                    </tr>
+                    </thead>
+                </table>
                     <h3>Attendees:</h3>
-                    <table>
+                    <table className="event-attendees">
                         <thead>
                             <tr>
                                 <th>Names</th>
@@ -90,9 +96,12 @@ const Event = () => {
                             ))}
                         </tbody>
                     </table>
-
-                    <DeleteEvent id={id} onDelete={handleDeleteNavigate} />
-                    <button onClick={handleEditToggle}>Edit Event</button>
+                    <table className="button-table">
+                        
+                    <td><DeleteEvent id={id} onDelete={handleDeleteNavigate} /></td>
+                    <td><button onClick={handleEditToggle} className="submit-button event-page">Edit Event</button></td>
+                    
+                    </table>
                 </>
             )}
         </section>

@@ -4,6 +4,7 @@ import axios from 'axios'
 import "../src/App.module.css";
 import "../src/index.module.css";
 
+
 const Home = () => {
     const [events, setEvents] = useState([])
 
@@ -16,7 +17,7 @@ const Home = () => {
     return (
         <div className='events-wrapper'>
             <h2 className='home-title'>Events</h2>
-            <table>
+            <table className='home-table'>
                 <thead>
                     <tr>
                         <th>Event Name</th>

@@ -5,7 +5,11 @@ import Logo from "./assets/logo4.png"
 
 const Header = () => {
     return (
+
+        
         <header className={style.header}>
+
+
             <div>
             <img className={style.didlydoo} src={Logo} alt='logo Didlydoo'/>
             </div>
